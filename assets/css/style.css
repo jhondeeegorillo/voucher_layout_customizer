@@ -8,96 +8,96 @@
 
 @font-face {
   font-family: "Segoe UI Variable Display";
-  src: url(../fonts/Segoe-UI-Variable-Static-Display-Light.ttf);
-  font-weight: 300;
+  src: url(../fonts/manrope.ttf);
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "Segoe UI Variable Display";
-  src: url(../fonts/Segoe-UI-Variable-Static-Display-Semilight.ttf);
-  font-weight: 350;
+  src: url(../fonts/manrope.ttf);
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "Segoe UI Variable Display";
-  src: url(../fonts/Segoe-UI-Variable-Static-Display.ttf);
-  font-weight: 400;
+  src: url(../fonts/manrope.ttf);
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "Segoe UI Variable Display";
-  src: url(../fonts/Segoe-UI-Variable-Static-Display-Semibold.ttf);
-  font-weight: 600;
+  src: url(../fonts/manrope.ttf);
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "Segoe UI Variable Display";
-  src: url(../fonts/Segoe-UI-Variable-Static-Display-Bold.ttf);
-  font-weight: 700;
+  src: url(../fonts/manrope.ttf);
+  font-weight: 500;
 }
 
 /* ################################################################ */
 
 @font-face {
   font-family: "Segoe UI Variable Small";
-  src: url(../fonts/Segoe-UI-Variable-Static-Small-Light.ttf);
-  font-weight: 300;
+  src: url(../fonts/manrope.ttf);
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "Segoe UI Variable Small";
-  src: url(../fonts/Segoe-UI-Variable-Static-Small-Semilight.ttf);
-  font-weight: 350;
+  src: url(../fonts/manrope.ttf);
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "Segoe UI Variable Small";
-  src: url(../fonts/Segoe-UI-Variable-Static-Small.ttf);
-  font-weight: 400;
+  src: url(../fonts/manrope.ttf);
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "Segoe UI Variable Small";
-  src: url(../fonts/Segoe-UI-Variable-Static-Small-Semibold.ttf);
-  font-weight: 600;
+  src: url(../fonts/manrope.ttf);
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "Segoe UI Variable Small";
-  src: url(../fonts/Segoe-UI-Variable-Static-Small-Bold.ttf);
-  font-weight: 700;
+  src: url(../fonts/manrope.ttf);
+  font-weight: 500;
 }
 
 /* ################################################################ */
 
 @font-face {
   font-family: "Segoe UI Variable Text";
-  src: url(../fonts/Segoe-UI-Variable-Static-Text-Light.ttf);
-  font-weight: 300;
+  src: url(../fonts/manrope.ttf);
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "Segoe UI Variable Text";
-  src: url(../fonts/Segoe-UI-Variable-Static-Text-Semilight.ttf);
-  font-weight: 350;
+  src: url(../fonts/manrope.ttf);
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "Segoe UI Variable Text";
-  src: url(../fonts/Segoe-UI-Variable-Static-Text.ttf);
-  font-weight: 400;
+  src: url(../fonts/manrope.ttf);
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "Segoe UI Variable Text";
-  src: url(../fonts/Segoe-UI-Variable-Static-Text-Semibold.ttf);
-  font-weight: 600;
+  src: url(../fonts/manrope.ttf);
+  font-weight: 500;
 }
 
 @font-face {
   font-family: "Segoe UI Variable Text";
-  src: url(../fonts/Segoe-UI-Variable-Static-Text-Bold.ttf);
-  font-weight: 700;
+  src: url(../fonts/manrope.ttf);
+  font-weight: 500;
 }
 
 /* ################################################################ */
@@ -110,15 +110,24 @@
 /* ################################################################ */
 
 :root {
-  --page-layout: 13in;
-  --duration-bg-color: #231f20;
+  --page-layout: 13in; 
+  --duration-bg-color: #000000;
   --duration-text-color: #ffffff;
-  --voucher-logo: url(../png/logo-black.png);
+  --header: rgb(35 31 32);
+  --button: rgb(35 31 32);
+  --textdark: rgb(35 31 32);
+  --textlight: rgb(125 126 126);
+  --bg: #ecedee;
+  --scroll: rgb(125 126 126);
+  --border: #ecedee;
+  --printon: rgb(125 126 126);
+  --printoff: rgb(125 126 126);
+  --error: rgb(255, 0, 0);
 }
 
 html {
   overflow: hidden;
-  background-color: rgb(236 237 238);
+  background-color: var(--bg);
 }
 
 * {
@@ -155,7 +164,7 @@ html {
 .icon {
   font-family: "Segoe Fluent Icons" !important;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 12px;
   line-height: 16px;
   color: currentColor;
@@ -169,8 +178,8 @@ button {
   border-radius: 30px;
   cursor: pointer;
   user-select: none;
-  background-color: rgb(35 31 32);
-  color: #ffffff;
+  background-color: var(--button);
+  color: rgb(255, 255, 255);
   border:none;
   width: auto;
   height: 32px;
@@ -179,53 +188,57 @@ button {
 }
 
 button:hover {
-  opacity: 1;
 }
 
 button:active {
-  opacity: 1;
-  border: none;
 }
 
 button:disabled {
   pointer-events: none;
-  background-color: #231f20;
+  background-color: var(--printoff);
   border: none;
+  color: rgb(255 255 255 / 50%);
 }
 
 .btn-standard {
   flex-direction: row;
   width: auto;
-  background-color: rgb(35 31 32);
+  background-color: var(--button);
   color: rgb(255 255 255);
-  border: 2px solid rgb(236 237 238);
+  border: none;
+}
+
+.print-btn {
+  flex-direction: row;
+  width: auto;
+  background-color: var(--printon);
+  color: rgb(255 255 255);
+  border: none;
 }
 
 .btn-standard:hover {
-  background-color: rgb(90 91 91);
 }
 
 .btn-standard:active {
-  background-color: #231f20;
   color: rgb(255, 255, 255);
   border: none;
 }
 
 .btn-standard:disabled {
-  background-color: rgb(35 31 32);
+  background-color: rgb(125 126 126);
   color: rgb(255 255 255 / 25%);
-  border: 2px solid rgb(255 255 255 / 25%);
+  border: none;
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 18px;
   color: rgb(255 255 255);
 }
 
 p {
   font-family: "Segoe UI Variable Small";
   font-size: 12px;
-  color: rgb(35 31 32);
+  color: var(--textlight);
 }
 
 aside {
@@ -265,7 +278,7 @@ aside {
   background-color: transparent;
   border: none;
   resize: none;
-  color: rgb(35 31 32);
+  color: var(--textdark);
 }
 
 .voucher-textarea {
@@ -307,13 +320,18 @@ aside {
 
 .heading-container p {
   padding-top: 4px;
-  color: rgb(35 31 32);
+  color: var(--textlight);
+  text-align: center;
 }
 
 .logo-img {
   height: 50px;
   user-select: none;
   pointer-events: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 .form-container {
@@ -338,12 +356,13 @@ aside {
 .group-option h6 {
   font-family: "Segoe UI Variable Small";
   font-size: 14px;
-  font-weight: bold;
-  color: rgb(35 31 32);
+  font-weight: 500;
+  color: var(--textdark);;
 }
 
 .group p {
-  color: #fe3159;
+  color: var(--error);
+  text-align: center;
 }
 
 .details {
@@ -355,20 +374,18 @@ aside {
   align-items: center;
   gap: 10px;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 500;
   height: 32px;
   border-radius: 4px;
-  color: rgb(35 31 32);
+  color: var(--textdark);
   cursor: pointer;
   user-select: none;
 }
 
 .more-settings:hover {
-  background-color: rgba(255, 255, 255, 0.0605);
 }
 
 .more-settings:active {
-  background-color: rgba(255, 255, 255, 0.0419);
 }
 
 .more-settings-container {
@@ -397,8 +414,8 @@ aside {
 
 .input-select-group .input {
   border-radius: 30px;
-  color: rgb(35 31 32);
-  border:none;
+  border: none;
+  color: var(--textdark);
 }
 
 .select-group select {
@@ -406,13 +423,12 @@ aside {
   border-radius: 30px;
   width: auto;
   padding: 0 26px 0 8px;
-  background-color: rgb(35 31 32);
-  color: rgb(255 255 255);
+  background-color: var(--button);
 }
 
 .select-group select option {
   color: rgb(255 255 255);
-  background-color: rgb(90 91 91);
+  background-color: var(--button);
   border-radius: 25px;
   border:none;
 }
@@ -433,6 +449,7 @@ aside {
   width: 38px;
   padding: 0 4px;
   cursor: pointer;
+  background-color: var(--button);
 }
 
 .input-switch input {
@@ -442,7 +459,7 @@ aside {
 .input-switch label {
   cursor: pointer;
   transition: all 100ms;
-  background-color: rgb(35 31 32);
+  background-color: var(--button);
   width: 38px;
   height: 20px;
   border: none;
@@ -463,15 +480,13 @@ aside {
 }
 
 .input-switch:hover label {
-  background-color: rgb(90 91 91);
 }
 
 .input-switch:hover label::after {
-  background-color: #ffffff;
 }
 
 .input-switch input:checked ~ label {
-  background-color: rgb(35 31 32);
+  background-color: var(--button);
   border: none;
 }
 
@@ -481,11 +496,9 @@ aside {
 }
 
 .input-switch:hover input:checked ~ label {
-  background-color: rgb(90 91 91);
 }
 
 .input-switch:hover input:checked ~ span {
-  background-color: rgba(255, 255, 255, 0.8);
 }
 
 main {
@@ -499,13 +512,13 @@ main {
     position: sticky;
     top: 0;
     padding: 30px 42px 55px;
-    background-color: rgb(236 237 238);
+    background-color: var(--bg);
 }
 
 .header-container {
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(35 31 32);
+  background-color: var(--header);
   height: 80px;
   padding: 0 32px;
   border-radius: 50px;
@@ -533,7 +546,7 @@ main {
   flex-shrink: 0;
   height: 96px;
   width: 154px;
-  outline: #ecedee solid 2px;
+  outline: #7d7e7e solid 1px;
   overflow: hidden;
 }
 
@@ -542,26 +555,26 @@ main {
   background-size: contain;
   background-repeat: no-repeat;
   user-select: none;
-  height: 24px;
+  height: 25px;
   margin: 8px 0 8px 10px;
 }
 
 .voucher-container p {
   font-family: "Segoe UI Variable Display";
-  color: #231f20;
-  font-size: 20px;
+  color: #000000;
+  font-size: 22px;
   margin: -10px 0px 0px 10px;
   font-weight: bold;
 }
 
-.voucher-container p::after {
+/*.voucher-container p::after {
   content: "Voucher Code";
   position: absolute;
   left: 2px;
   bottom: -10px;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 8px;
-}
+}*/
 
 .voucher-container span {
   user-select: none;
@@ -569,14 +582,14 @@ main {
   left: 10px;
   font-family: "Segoe UI Variable Display";
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
-  line-height: 20px;
+  line-height: 23px;
   color: var(--duration-text-color);
   background-color: var(--duration-bg-color);
-  height: 20px;
+  height: 24px;
   min-width: 44px;
-  padding: 0 8px;
+  padding: 0 10px;
   border-radius: 30px;
 }
 
@@ -602,19 +615,19 @@ main {
 .get-started h2 {
   font-size: 16px;
   text-align: center;
-  color: rgb(35 31 32);
+  color: var(--textdark);
 }
 
 .get-started p {
   text-align: center;
   width: 60ch;
   max-width: 100%;
-  color: rgb(90 91 91);
+  color: var(--textdark);
 }
 
 .get-started u {
   font-size: 12px;
-  color: rgb(35 31 32);
+  color: var(--textdark);
   cursor: pointer;
 }
 
@@ -646,7 +659,7 @@ dialog header {
 }
 
 .btn-close {
-  background-color: #231f20;
+  background-color: var(--button);
   color: #ffffff;
   border: none;
   width: 30px;
@@ -656,17 +669,15 @@ dialog header {
 }
 
 .btn-close:hover {
-  background-color: rgb(90 91 91);
 }
 
 .btn-close:active {
-  background-color: rgb(35 31 32);
   color: rgb(255, 255, 255);
   border: none;
 }
 
 a{
-  color:#231f20;
+  color: var(--textdark);
 }
 
 dialog .body {
@@ -699,20 +710,20 @@ dialog .body ol li {
 }
 
 dialog .body ol li p {
-  width: 60ch;
+  width: auto;
   max-width: 100%;
 }
 
 dialog .body ol li img {
   margin-left: 8px;
   border-radius: 25px;
-  border: 2px solid rgb(236 237 238);
+  border: 2px solid var(--border);
   max-width: calc(100% - 16px);
 }
 
 .code-block {
   background-color: rgb(255, 255, 255);
-  border: 2px solid rgb(236 237 238);
+  border: 2px solid var(--border);
   border-radius: 25px;
   padding: 8px 42px 8px 8px;
   margin: 0 8px;
@@ -731,12 +742,14 @@ dialog .body ol li img {
   line-height: 14px;
   padding: 0;
   width: 32px;
+  background-color: var(--button);
 }
 
 dialog button.ok {
   margin: auto;
   margin-top: 15px;
   margin-bottom: 16px;
+  background-color: var(--button)
 }
 
 .blue {
@@ -775,20 +788,17 @@ dialog button.ok {
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: rgb(90 91 91);
+    background-color: var(--scroll);;
     border-radius: 4px;
   }
 
   *::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(151, 154, 162, 0.75);
   }
 
   *::-webkit-scrollbar-thumb:active {
-    background-color: rgb(151, 154, 162);
   }
 
   *::-webkit-scrollbar-corner {
-    background-color: transparent;
   }
 }
 

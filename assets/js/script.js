@@ -82,7 +82,7 @@ const setDurationTextColor = (hexColor) => {
   const green = parseInt(color.substr(2, 2), 16);
   const blue = parseInt(color.substr(4, 2), 16);
   const luminance = (0.299 * red + 0.587 * green + 0.114 * blue) / 255;
-  const textColor = luminance > 0.5 ? "#231f20" : "#ffffff";
+  const textColor = luminance > 0.5 ? "#000000" : "#ffffff";
   setHTMLRoot("--duration-text-color", textColor);
 };
 
@@ -184,14 +184,14 @@ const mediaScreen = window.matchMedia("(max-width: 800px)");
 const checkMediaScreen = () => {
   if (!mediaScreen.matches) {
     document.querySelector(".header-container").innerHTML = `<h1>Voucher Layout Customizer</h1>
-    <button id="print-btn" class="btn-standard" ${
+    <button id="print-btn" class="print-btn" ${
       !document.querySelector(".get-started") ? "" : "disabled"
     }><i class="icon">&#xe749;</i>Print</button>`;
   } else {
     document.querySelector(
       ".header-container"
     ).innerHTML = `<img src="assets/png/logo.png" alt="Logo" class="logo-img" />
-    <button id="print-btn" class="btn-standard" ${
+    <button id="print-btn" class="print-btn" ${
       !document.querySelector(".get-started") ? "" : "disabled"
     }><i class="icon">&#xe749;</i></button>`;
   }
