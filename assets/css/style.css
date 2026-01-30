@@ -850,6 +850,12 @@ dialog button.ok {
     overflow-x: hidden;
   }
 
+  .page-layout {
+    transform: scale(0.475);
+    transform-origin: top left;
+    margin-left: 22px;
+  }
+
   .header-section {
     padding: 6px 5px 6px;
   }
